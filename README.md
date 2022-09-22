@@ -50,16 +50,35 @@ Before downloading this package, make sure that Klak NDI and Klak Spout are Inst
 On MacOS, Klak Spout is not required.
 
 Follow the installation instructions in each of the packages below.
+
 https://github.com/keijiro/KlakNDI
 https://github.com/keijiro/KlakSpout
 
 Known issues and limitations from those packages are present in this one, but won't be a problem for SceneForge usage.
 
-Then, once that is set up, you can download and install this package.
+**Then, once that is set up, you can download and install this package.**
 
 Usage
 -----------
 You can use each of the above packages individually with no trouble, but the SceneForge component provides a more streamlined solution.  Additionally, using the original Klak NDI plugin won't support tracking data from SceneForge Server.
 
-Simply att
+Simply attach the **SceneForge Server Manager** component to any object in your scene.
 
+
+
+
+
+
+What's the difference between NDI and Spout?
+------------------------------
+- NDI: Video-over-IP codec/protocol
+- Spout: Interprocess GPU memory sharing on DirectX
+
+NDI requires CPU/memory/network load, but it's greatly versatile.
+
+Spout doesn't produce any CPU load, but its range of application is limited.
+
+If you're trying to share videos between applications running on a single
+Windows PC, Spout would be a better solution.
+
+But, if you want access to tracking data, at this time NDI is the only option.  More will come in the future.
