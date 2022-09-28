@@ -9,8 +9,11 @@ It makes use of [Spout] (Windows Only) and [NDI]®.  You can choose one or the o
 [NDI]: https://www.ndi.tv/
 [NewTek]: https://www.newtek.com/
 
-Components
+Table of Contents
 -------------------
+- [Components](##Components)
+
+## Components
 The SceneForge Server SDK makes use of [Klak Spout] and [Klak NDI] for video streaming, and acts as a wrapper to make the process more streamlined.
 It also handles reading and using SceneForge tracking data for you.
 For notes on installation, see below.
@@ -19,8 +22,7 @@ For notes on installation, see below.
 [Klak Spout]: https://github.com/keijiro/KlakSpout
 
 
-System Requirements
--------------------
+## System Requirements
 Spout only works on Windows PCs
 - Unity 2020.3 or Later
 
@@ -44,8 +46,7 @@ Desktop platforms:
 - Windows: x64, D3D11/D3D12
 - macOS: x64 or arm64 (M1), Metal
 
-Installation
----------------
+## Installation
 Before downloading this package, make sure that Klak NDI and Klak Spout are Installed.
 On MacOS, Klak Spout is not required.
 
@@ -59,8 +60,7 @@ Known issues and limitations from those packages are present in this one, but wo
 
 **Then, once that is set up, you can download and install *this* package.**
 
-Usage
------------
+## Usage
 You can use each of the above packages individually with no trouble, but the SceneForge component provides a more streamlined solution.  Additionally, if using the original Klak NDI plugin, you'll have to set up your own tracking solution using the NDI's MetaData.
 
 Simply attach the **SceneForge Server** component to any object in your scene.
@@ -76,8 +76,7 @@ You can have multiple **SceneForge Server** components in your scene that operat
 - - You can choose between `None`, `Body`, or `Mobile`.
 - - - `Body` Requires your transform to be set up in a certain way, while `Mobile` will move the desired transform by the recieved translation.  More info about tracking is below.
 
-Tracking
------------
+## Tracking
 As mentioned above, when using NDI, you can choose between either disabling recieved tracking, reading Body tracking data, or Mobile tracking data.
 
 When the mode is enabled, you must specify a target transform to apply the tracking to.
@@ -91,20 +90,17 @@ This is the local position and rotation of a child transform within an empty par
 #### Mobile
 This will move the target transform by the recieved tracking data, starting at the object's position on Play.  So set up your target transform at the desired starting position before playing, then when tracking data is recieved, translation and rotation will occur with each recieved frame.
 
-Recording
------------
+## Recording
 You can use the Unity Recorder or Timeline package to record the recieved tracking data for future playback.  This is useful for recording multiple takes.
 
-Scripting
--------------
+## Scripting
 For custom usage, you can also access the recieved Texture (from NDI or Spout), or metadata (From NDI) by accessing the `.Texture` variable and the `.MetaData` variable of the Server Manager Script respectively.
 You can do what you want with this information once play mode is entered.
 
 Additionally, for the individual Spout and NDI components, all API usage carries over from their original sources.
 
 
-What's the difference between NDI and Spout?
-------------------------------
+## What's the difference between NDI and Spout?
 - NDI: Video-over-IP codec/protocol
 - Spout: Interprocess GPU memory sharing on DirectX
 
