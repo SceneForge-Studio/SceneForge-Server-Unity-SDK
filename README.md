@@ -102,11 +102,22 @@ This will move the target transform by the recieved tracking data, starting at t
 You can use the Unity Recorder or Timeline package to record the recieved tracking data for future playback.  This is useful for recording multiple takes.
 
 ## Scripting
-For custom usage, you can also access the recieved Texture (from NDI or Spout), or metadata (From NDI) by accessing the `.Texture` variable and the `.MetaData` variable of the Server Manager Script respectively.
+For custom usage, you can also access the recieved Texture (from NDI or Spout), or metadata (From NDI) by accessing the `.texture` variable and the `.metaData` variable of the Server Manager Script respectively.
 You can do what you want with this information once play mode is entered.
 
-Additionally, for the individual Spout and NDI components, all API usage carries over from their original sources.
+Additionally, you can access the "Behind the Scenes" source NDI and Spout Reciever components from `.ndi` and `.spout` respectively.  All API usage of those hidden components carry over from their source packages.
 
+#### NDI Metadata
+Tracking data is send as a Json string within the NDI metadata, and deserialized using Unity's JsonUtility class.
+The format is as follows:
+
+```
+{
+  "position": [VECTOR 3],
+  "rotation": [QUATERNION],
+  "scale": [VECTOR 3]
+}
+```
 
 ## What's the difference between NDI and Spout?
 - NDI: Video-over-IP codec/protocol
