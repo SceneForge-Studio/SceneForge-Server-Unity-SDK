@@ -82,6 +82,8 @@ As mentioned above, when using NDI, you can choose between either disabling reci
 
 When the mode is enabled, you must specify a target transform to apply the tracking to.
 
+In order to use this, keep in mind that within SceneForge Server, you must be within 3D mode, and have a tracking mode and output selected, othwise no data will be sent.
+
 #### Body
 This is the local position and rotation of a child transform within an empty parent.  This child will act as the "object" that the chromakey footage is projected on, and it will move according to the tracked person from the SceneForge Server application.  You can still move the "parent" however you wish.
 ***For Pivot Tracking:**  If the tracking mode within the Server application is set to "Pivot", only the local position of the video surface will be sent.  You will need to add the included `Follow Camera` Component to your object's parent.
