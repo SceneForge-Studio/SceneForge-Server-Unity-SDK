@@ -11,7 +11,15 @@ It makes use of [Spout] (Windows Only) and [NDI]®.  You can choose one or the o
 
 Table of Contents
 -------------------
-- [Components](##Components)
+- [Components](#components)
+- [System Requirements](#system-requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tracking](#tracking)
+- [Recording](#recording)
+- [Scripting](#scripting)
+- [NDI Vs. Spout](#whats-the-difference-between-ndi-and-spout)
+- [Support](#support)
 
 ## Components
 The SceneForge Server SDK makes use of [Klak Spout] and [Klak NDI] for video streaming, and acts as a wrapper to make the process more streamlined.
@@ -112,3 +120,7 @@ If you're trying to share videos between applications running on a single
 Windows PC, Spout would be a better solution.
 
 But, if you want access to tracking data, at this time NDI is the only option that supports additonal metadata.  More options will come in the future.
+
+
+## Support
+If you have any questions, bug reports, or suggestions, you can reach out to Support@SceneForge.app and I'll get back to you as soon as possible.
